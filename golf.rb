@@ -83,24 +83,36 @@
 # end
 # num
 
-# Hole 4
+# # Hole 4
 
+# def input
+#     puts 'Declare number'
+#     i = gets.to_i
+#     puts 'Declare Max Value'
+#     mv = gets.to_i
+#     sum = 0
+
+#     while sum < mv
+#         sum += i
+#         if sum > mv
+#             puts sum - i
+#         else
+#             puts sum
+#         end
+#     end
+
+# end
+
+# input
+ 
 def input
-    puts 'Declare number'
-    i = gets.to_i
-    puts 'Declare Max Value'
-    mv = gets.to_i
-    sum = 0
-
-    while sum < mv
-        sum += i
-        if sum > mv
-            puts sum - i
-        else
-            puts sum
-        end
-    end
-
+    alpha_table = {}
+    (('A'..'Z').zip(1..26)).each { |x| alpha_table[x[0]] = x[1] }
+    
+    s = gets.to_s.strip 
+    puts alpha_table
+    result = s.split('').collect { |x| alpha_table[x] }
+    puts result
 end
 
 input
