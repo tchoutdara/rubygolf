@@ -107,8 +107,11 @@
  
 def input
     input1 = gets.to_s.upcase.strip
+    offset = gets. to_i
     input1.each_byte do |c|
-        puts c
+        result = c + offset
+        puts result.chr
+        
     end
 end
 
