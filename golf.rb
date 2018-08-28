@@ -106,13 +106,10 @@
 # input
  
 def input
-    alpha_table = {}
-    (('A'..'Z').zip(1..26)).each { |x| alpha_table[x[0]] = x[1] }
-    
-    s = gets.to_s.strip 
-    puts alpha_table
-    result = s.split('').collect { |x| alpha_table[x] }
-    puts result
+    input1 = gets.to_s.upcase.strip
+    input1.each_byte do |c|
+        puts c
+    end
 end
 
 input
